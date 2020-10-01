@@ -3,13 +3,20 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 # Cada termino nuevo en la secuencia de Fibonacci es generado añadiendo los dos terminos anteriores. Los primeros 10 terminos serian:
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
-# Considerando que los terminos en la secuencia de fibonacci no exedan los cuatro millones, encuentra la suma de los terminos evaluados.
+# Considerando que los terminos en la secuencia de fibonacci no exedan los cuatro millones, encuentra la suma de los terminos pares.
 
-d = []
+
 r = 1
 n = 1
-while True:
+sum = 0
+while (r and n) < 4000000:
     r = r + n
+    if r%2 == 0:
+        print(f"{r} es par")
+        sum += r
     n = n + r
-    d.append(n)
-    d.append(r)
+    if n%2 == 0:
+        print(f"{n} es par")
+        sum += n
+
+print(sum)
