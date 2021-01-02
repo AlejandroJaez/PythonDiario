@@ -19,4 +19,4 @@ while (r and n) < 4000000:
         print(f"{n} es par")
         sum += n
 
-print(sum)
+print(f"{sum} es el total.")
